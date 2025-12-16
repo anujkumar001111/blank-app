@@ -1,0 +1,7 @@
+Navigate to https://www.wikipedia.org/.
+Wait for the page to load.
+Search for "Artificial Intelligence" using the search box.
+Wait for the article to load.
+Take a screenshot of the article.
+Scroll down and take another screenshot.
+Extract the first paragraph of the article.

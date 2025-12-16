@@ -1,0 +1,6 @@
+Navigate to https://news.ycombinator.com/ (Hacker News).
+Wait for the page to load.
+Take a screenshot of the homepage.
+Extract the titles of the top 5 stories.
+Click on the "new" link to see newest stories.
+Take a screenshot of the new stories page.

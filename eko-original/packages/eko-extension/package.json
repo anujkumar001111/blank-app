@@ -1,0 +1,57 @@
+{
+  "name": "@eko-ai/eko-extension",
+  "version": "4.0.5",
+  "description": "Empowering language to transform human words into action.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist/",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs.js",
+      "import": "./dist/index.esm.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest"
+  },
+  "author": "FellouAI",
+  "license": "MIT",
+  "keywords": [
+    "fellou",
+    "eko"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FellouAI/eko.git"
+  },
+  "dependencies": {
+    "@eko-ai/eko": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/chrome": "0.0.158",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.15.29",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "jest": "^29.7.0",
+    "rollup": "^4.40.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "ts-jest": "^29.3.2",
+    "tslib": "^2.8.1",
+    "typescript": "^5.8.3"
+  }
+}

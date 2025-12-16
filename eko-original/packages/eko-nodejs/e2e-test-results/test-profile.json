@@ -1,0 +1,25 @@
+{
+  "cookies": [
+    {
+      "name": "testCookie",
+      "value": "testCookieValue",
+      "domain": "example.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://example.com",
+      "localStorage": [
+        {
+          "name": "testKey",
+          "value": "testValue"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "strict": false,
+    "target": "ES2018",
+    "moduleResolution": "node",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "declaration": false,
+    "noEmit": true,
+    "types": ["node", "jest", "chrome"]
+  },
+  "include": ["src/**/*", "test/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

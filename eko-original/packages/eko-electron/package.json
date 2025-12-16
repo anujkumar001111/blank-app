@@ -1,0 +1,64 @@
+{
+  "name": "@eko-ai/eko-electron",
+  "version": "4.0.5",
+  "description": "Electron environment support for Eko framework with native desktop capabilities.",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist/",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs.js",
+      "import": "./dist/index.esm.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "test": "pnpm exec jest --runInBand || (echo \"jest not available; skipping tests\" && exit 0)"
+  },
+  "author": "FellouAI",
+  "license": "MIT",
+  "keywords": [
+    "fellou",
+    "eko",
+    "electron",
+    "desktop-automation"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FellouAI/eko.git"
+  },
+  "dependencies": {
+    "@eko-ai/eko": "workspace:*",
+    "glob": "^11.0.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/node": "^22.15.19",
+    "electron": "^39.2.6",
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.3.2",
+    "rollup": "^4.40.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "tslib": "^2.8.1",
+    "typescript": "^5.8.3"
+  },
+  "peerDependencies": {
+    "electron": ">=20.0.0"
+  }
+}

@@ -1,0 +1,5 @@
+Navigate to google.com and search for "Eko AI browser automation".
+Wait for the results to load.
+Take a screenshot of the search results.
+Click on the first organic search result (not an ad).
+Wait for the page to load and take another screenshot.

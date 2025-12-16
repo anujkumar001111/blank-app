@@ -1,0 +1,78 @@
+{
+  "name": "@eko-ai/eko-nodejs",
+  "version": "4.0.5",
+  "description": "Empowering language to transform human words into action.",
+  "main": "dist/index.cjs",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "bin": {
+    "eko-playground": "./cli/eko-playground.cjs"
+  },
+  "files": [
+    "dist/",
+    "cli/",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.esm.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./playground": {
+      "require": "./cli/eko-playground.cjs"
+    }
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest",
+    "playground": "node cli/eko-playground.cjs",
+    "playground:interactive": "node cli/eko-playground.cjs --interactive",
+    "playground:full": "node cli/eko-playground-full.cjs",
+    "playground:browser": "node cli/eko-playground-full.cjs --browser",
+    "playground:system": "node cli/eko-playground-full.cjs --system",
+    "playground:workflow": "node cli/eko-playground-full.cjs --workflow"
+  },
+  "author": "FellouAI",
+  "license": "MIT",
+  "keywords": [
+    "fellou",
+    "eko"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FellouAI/eko.git"
+  },
+  "dependencies": {
+    "@eko-ai/eko": "workspace:*",
+    "canvas": "^3.2.0",
+    "chromium-bidi": "^0.12.0",
+    "glob": "^11.0.0",
+    "merge-deep": "^3.0.3",
+    "playwright": "^1.57.0",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.15.19",
+    "dotenv": "^16.5.0",
+    "jest": "^29.7.0",
+    "rollup": "^4.40.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "ts-jest": "^29.3.2",
+    "tslib": "^2.8.1",
+    "typescript": "^5.8.3"
+  }
+}

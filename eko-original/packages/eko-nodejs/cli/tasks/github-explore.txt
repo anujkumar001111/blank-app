@@ -1,0 +1,6 @@
+Navigate to https://github.com/FellouAI/eko.
+Wait for the page to load completely.
+Take a screenshot of the repository homepage.
+Scroll down to see the README content.
+Take another screenshot showing the README.
+Extract the repository description and star count.

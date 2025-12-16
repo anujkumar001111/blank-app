@@ -1,0 +1,6 @@
+Eko E2E Test File
+Created: 2025-12-12T18:53:12.768Z
+Browser: Chromium
+LLM: gemini-claude-sonnet-4-5
+
+This file was created during the real-world E2E test.
