@@ -297,7 +297,6 @@ export function createAgent(overrides = {}): WorkflowAgent {
 ```yaml
 - name: Test
   run: pnpm test -- --coverage --ci
-  working-directory: eko-original
   env:
     OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 ```

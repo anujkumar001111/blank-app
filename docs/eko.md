@@ -55,7 +55,7 @@
 
   <prerequisites>
     <environment_setup>
-      - Install: `cd eko-original && pnpm install`
+      - Install: `pnpm install`
       - Build: `pnpm build` (sequential across packages)
       - Test: `pnpm test` (jest across packages)
       - Env vars for LLMs: OPENAI_API_KEY or OPENAI_COMPATIBLE_API_KEY (+ model/base URL), ANTHROPIC_API_KEY, etc., depending on provider (see tests/CLI)

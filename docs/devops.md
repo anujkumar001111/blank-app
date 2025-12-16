@@ -12,7 +12,7 @@ Eko is a pnpm monorepo with 5 packages. This document covers build, test, and de
 ## 2. Project Structure
 
 ```
-eko-original/
+./
 ├── packages/
 │   ├── eko-core/       # @eko-ai/eko
 │   ├── eko-nodejs/     # @eko-ai/eko-nodejs
@@ -23,6 +23,7 @@ eko-original/
 │   ├── extension/
 │   ├── nodejs/
 │   └── web/
+├── docs/
 ├── pnpm-workspace.yaml
 └── package.json
 ```
@@ -44,7 +45,7 @@ eko-original/
 
 ```bash
 # Install all dependencies
-cd eko-original && pnpm install
+pnpm install
 
 # Build all packages (sequential)
 pnpm build
@@ -85,7 +86,7 @@ Each package produces:
 
 ```bash
 # Run all tests
-cd eko-original && pnpm test
+pnpm test
 
 # Run package tests
 cd packages/eko-core && pnpm test
@@ -142,15 +143,12 @@ jobs:
           
       - name: Install dependencies
         run: pnpm install
-        working-directory: eko-original
         
       - name: Build
         run: pnpm build
-        working-directory: eko-original
         
       - name: Test
         run: pnpm test
-        working-directory: eko-original
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -183,13 +181,10 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           
       - run: pnpm install
-        working-directory: eko-original
         
       - run: pnpm build
-        working-directory: eko-original
         
       - run: pnpm -r publish --access public
-        working-directory: eko-original
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 ```
