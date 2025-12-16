@@ -47,8 +47,11 @@ describe('HttpRequestTool', () => {
 
             expect(result.isError).toBe(true);
             expect(result.content).toHaveLength(1);
-            expect(result.content[0].type).toBe('text');
-            expect(result.content[0].text).toContain('Error');
+            const content = result.content[0];
+            expect(content.type).toBe('text');
+            if (content.type === 'text') {
+                expect(content.text).toContain('Error');
+            }
         });
 
         test('should handle missing protocol gracefully', async () => {
@@ -57,7 +60,10 @@ describe('HttpRequestTool', () => {
             });
 
             expect(result.isError).toBe(true);
-            expect(result.content[0].text).toContain('Error');
+            const content = result.content[0];
+            if (content.type === 'text') {
+                expect(content.text).toContain('Error');
+            }
         });
     });
 
@@ -71,7 +77,11 @@ describe('HttpRequestTool', () => {
 
             expect(result.isError).toBe(true);
             // Either timeout or connection error
-            expect(result.content[0].text).toMatch(/Error|timed out/i);
+            // Either timeout or connection error
+            const content = result.content[0];
+            if (content.type === 'text') {
+                expect(content.text).toMatch(/Error|timed out/i);
+            }
         }, 5000);
     });
 

@@ -27,7 +27,7 @@ export class OpenAIEmbeddingProvider implements EmbeddingProvider {
 
         try {
             const { embedding } = await embed({
-                model: openai.embedding(this.model),
+                model: openai.embedding(this.model) as any,
                 value: text,
             });
 
