@@ -1,56 +1,73 @@
-# Dependencies
-node_modules/
-.pnp/
-.pnp.js
 
+# .env files (store environment variables)
+# Build output
 # Build outputs
-dist/
-build/
-out/
-*.tsbuildinfo
-.turbo/
-
+# Coverage reports
+# Dependencies
+# Dependency directory
 # Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.env*.local
-
-# Testing
-coverage/
-.nyc_output/
-*.lcov
-
-# Logs
-logs/
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
 # IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-*.swn
-*~
-.DS_Store
-
-# Temporary files
-*.tmp
-tmp/
-temp/
-.cache/
-
+# IDE & Editor directories and files
+# Logs
+# Misc
+# Miscellaneous files
+# Node modules folder
+# Operating system files
 # Package manager lock files (keep pnpm-lock.yaml for monorepo)
+# Temporary files
+# Test coverage directory
+# Test generated files
+# Testing
+# TypeScript build
+# npm package lock files (if you don't want them tracked by Git)
 # package-lock.json
 # yarn.lock
-
-# Misc
-Thumbs.db
+*.bak
+*.lcov
+*.log
+*.sublime-project
+*.sublime-workspace
+*.swn
+*.swo
+*.swp
+*.tgz
+*.tmp
+*.tsbuildinfo
+*.zip
+*~
+.DS_Store
+.cache/
+.env
+.env*.local
+.env.*.local
+.env.development.local
+.env.local
+.env.production.local
+.env.test.local
 .history/
+.idea/
+.nyc_output/
+.pnp.js
+.pnp/
+.turbo/
+.vscode/
+/test/fixtures/generated/eko-playground-output/
+Thumbs.db
+build/
+coverage/
+dist/
+jspm_packages/
+lerna-debug.log*
+logs
+logs/
+node_modules/
+npm-debug.log*
+out/
+package-lock.json
+pnpm-debug.log*
+pnpm-lock.yaml
+temp/
+tmp/
+yarn-debug.log*
+yarn-error.log*
+yarn.lock
