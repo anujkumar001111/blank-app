@@ -21,7 +21,8 @@
     "sourceMap": true,
     "resolveJsonModule": true,
     "types": [
-      "jest"
+      "jest",
+      "node"
     ]
   },
   "include": [
